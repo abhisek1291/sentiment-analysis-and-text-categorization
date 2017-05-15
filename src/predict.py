@@ -9,6 +9,9 @@ import concept_class as cc
 
 
 def predictConceptClass(classifier, data):
+    '''
+    Predicts the Category of each tweet
+    '''
     data_vector = tc.vectorize().transform(data['tweet'])
     prediction_rbf = classifier.predict(data_vector)
 
@@ -32,6 +35,9 @@ def sentimentForClass(cclass):
 
 
 def predictSentiment(classifier, data):
+    '''
+    Predicts the sentiment of each tweet.
+    '''
     data_vector = sc.vectorize().transform(data['tweet'])
     sentiment_predict = classifier.predict(data_vector)
 

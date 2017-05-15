@@ -1,7 +1,7 @@
 #######################################
 #
 # author : Abhisek Mohanty
-# description : create the document term matrix from the tf-idf values
+# description : Generates the document term matrix for the tweets after generating its tf-idf values.
 #
 #######################################
 

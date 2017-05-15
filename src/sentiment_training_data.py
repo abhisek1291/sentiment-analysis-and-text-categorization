@@ -1,6 +1,6 @@
 #################################
 # Author : Abhisek Mohanty
-# Description : Gets the Training Data From Twitter and writes to disk
+# Description : Reads the Sentiment training data from the dataset on disk, cleans the data and keeps it ready for the sentiment classifier.
 #################################
 import re
 

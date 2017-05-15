@@ -32,6 +32,9 @@ def vectorize():
 
 
 def trainSVM(train_test_data):
+    '''
+    Train the Support Vector Machine
+    '''
     x_train, x_test, y_train, y_test = train_test_split(
         train_test_data['tweet'],
         train_test_data['Sentiment'],
@@ -52,6 +55,9 @@ def trainSVM(train_test_data):
 
 
 def trainNaiveBayes(train_test_data):
+    '''
+        Train the Naive Bayes Classifier
+    '''
     x_train, x_test, y_train, y_test = train_test_split(
         train_test_data['tweet'],
         train_test_data['Sentiment'],

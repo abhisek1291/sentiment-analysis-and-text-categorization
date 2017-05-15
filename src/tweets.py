@@ -1,6 +1,10 @@
 #################################
 # Author : Abhisek Mohanty
-# Description :
+# Description : Gets realtime tweets by country and trending topics for categorization and sentiment analysis.
+#               Writes the data for each category to disk using the diskaccess.py file.
+#               Containes logic that put the application to sleep once the Twitter API returns and exception - Line 51
+#               After the application wakes up, it continues the data fetch.
+#               The previous country whose data was not fetched due to the exception is added to missed_countries and fetched at the end.
 #################################
 import re
 
@@ -44,7 +48,6 @@ def retrievetweets(api_connection):
                         if bool(tweets_by_topic_country):
                             # tweets_by_topic_country['country'] = name  ## We dont need to do this
                             da.generateFile(tweets_by_topic_country, 'predict_data', name, 'w')
-                            # real_time_data = real_time_data.append(pdt.preparerealtimedata(tweets_by_topic_country, name))
 
                 except Exception as ex:
                     if 'Rate limit exceeded' in ex.message:

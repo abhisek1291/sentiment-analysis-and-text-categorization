@@ -1,6 +1,6 @@
 #################################
 # Author : Abhisek Mohanty
-# Description :
+# Description : Gets the list of countries and the trends.
 #################################
 
 try:
@@ -17,7 +17,7 @@ def getcountrylist(api_connection):
     # we wouldn't want to miss any countries
     max_iter = 2
 
-    for i in range(1, max_iter):
+    for i in range(0, max_iter):
         trends = api_connection.trends.available(_woeid=1)
         trends_json = json.dumps(trends, indent=5)
         trends_data = json.loads(trends_json)

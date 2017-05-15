@@ -1,6 +1,8 @@
 #################################
 # Author : Abhisek Mohanty
 # Description : Reads the Data to be classified from disk and preps it
+#               This realtime data (which is to be classified) is already fetched from twitter previously
+#               using the tweets.py file.
 #################################
 
 try:
@@ -19,24 +21,11 @@ list_trends = []
 list_tweets = []
 
 
-# def preparerealtimedata(country_data, country_name):
-#     country_trends[country_name] = list(country_data.keys())
-#
-#     for key in country_data.keys():
-#         for tweet in country_data[key]:
-#             list_country.append(country_name)
-#             list_trends.append(key)
-#         list_tweets.append(tweet)
-#
-#     data['country'] = list_country
-#     data['trend'] = list_trends
-#     data['tweet'] = list_tweets
-#
-#     return data
-
-
 def preparerealtimedata():
-    # print ct.countries
+    '''
+    Returns the realtime data which needs to be classified.
+    '''
+    
     for name, c_id in ct.countries.iteritems():
         if name != '':
             country_data = da.readFileFromDisk('predict_data', name)

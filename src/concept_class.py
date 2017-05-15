@@ -1,6 +1,6 @@
 #################################
 # Author : Abhisek Mohanty
-# Description :
+# Description : The list of Concept Classes for the categorization part
 #################################
 
 categories_keys = {
